@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'java'
+apply plugin: 'application'
+group 'org.example'
+version '1.0-SNAPSHOT'
+mainClassName = 'main.java.testjava'
+repositories {
+
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'com.google.guava', name: 'guava', version: '23.6-jre'
+}
+
+test {
+    useJUnitPlatform()
+}
